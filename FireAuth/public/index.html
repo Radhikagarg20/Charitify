@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./style/home.css">
+</head>
+
+<body>
+  <main>
+    <div class="wrapper">
+      <div class="whole">
+        <div class="left-side-img">
+          <img src="../public/img/login/form_image1.jpeg" alt="">
+        </div>
+        <section class="container mail-container">
+          <fieldset>
+            <div>
+              <img src="./img/login.png" alt="login with mail & password">
+            </div>
+            <div>
+              <label for="mail"><i class="fa fa-envelope" aria-hidden="true"></i> Email</label> <br>
+              <input type="email" id="mail" name="mail" />
+            </div>
+            <div>
+              <label for="password"><i class="fa fa-lock" aria-hidden="true"></i> Password</label> <br>
+              <input type="password" id="password" name="password" />
+            </div>
+            <a href="./reset.html">I forgot my password</a>
+            <div class="clearfix"></div>
+            <button id="signInWithMail"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+            <button id="signUp"><i class="fa fa-sign-in" aria-hidden="true"></i> Signup</button>
+          </fieldset>
+        </section>
+      </div>
+    </div>
+
+    <h3>or login with</h3>
+
+    <section class="other-links">
+      <button id="method1"><i class="fa fa-google" aria-hidden="true"></i> Google </button>
+      <button id="method2"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</button>
+      <button id="method3"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</button>
+    </section>
+
+    <div class="feedbackContainer success">
+      <div class="feedbackIcon"></div>
+      <p class="feedbackMessage">Signed up Successfully</p>
+    </div>
+    <div class="feedbackContainer failure">
+      <div class="feedbackIcon"></div>
+      <p class="feedbackMessage">Signing up failed</p>
+    </div>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyDQRPjwzQY6wO1e0oxQMamKRPW7td_wQbs",
+      authDomain: "charity-app-e31cc.firebaseapp.com",
+      databaseURL: "https://charity-app-e31cc.firebaseio.com",
+      projectId: "charity-app-e31cc",
+      storageBucket: "charity-app-e31cc.appspot.com",
+      messagingSenderId: "233446000003",
+      appId: "1:233446000003:web:d253ffd11f923d21a422b6",
+      measurementId: "G-NJ0H9ZQ056"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="./js/home.js"></script>
+
+</body>
+</html>
